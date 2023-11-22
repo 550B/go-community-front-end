@@ -1,0 +1,85 @@
+.goban {
+    --board-border-width: .25em;
+    --board-border-color: #CA933A;
+
+    --board-background-color: #EBB55B;
+    --board-foreground-color: #5E2E0C;
+
+    --black-background-color: #222;
+    --black-foreground-color: #eee;
+
+    --white-background-color: #eee;
+    --white-foreground-color: #222;
+
+    position: relative;
+    border: var(--board-border-width) solid var(--board-border-color);
+    color: var(--board-foreground-color);
+
+    background: url('../assets/board.png') var(--board-background-color);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    }
+    /* font-size: 0; */
+    /* display: inline-block; */
+    /* vertical-align: top;  */
+    .goban:not(.coordinates) {
+        padding: .25em;
+}
+
+
+.coordx span, .coordy span {
+    font-size: .6em;
+}
+
+
+
+/* Board grid */
+
+/* .gridline, .hoshi {
+    fill: var(--board-foreground-color);
+} */
+
+
+
+/* Stone render */
+
+.vertex .stone {
+    top: .04em;
+    left: .04em;
+    width: calc(100% - .08em);
+    height: calc(100% - .08em);
+}
+.vertex .shadow {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.vertex .inner {
+    width: 100%;
+    height: 100%;
+    text-indent: -9999rem;
+}
+/* .vertex:not(.sign_0).dimmed .stone {
+    opacity: .6;
+} */
+.vertex:not(.sign_0) .shadow {
+    background: rgba(23, 10, 2, .4);
+    box-shadow: 0 .1em .2em rgba(23, 10, 2, .4);
+}
+.stone-image {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.stone-image.sign_1 {
+    background-image: url('../assets/stone_1.png');
+}
+.stone-image.sign_-1 {
+    background-image: url('../assets/stone_-1.png');
+}
+.possibleStone{
+    opacity: .6;
+    width: 100%;
+    height: 100%;
+}
+
